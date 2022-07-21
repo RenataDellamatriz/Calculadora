@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link href="reset.css" rel="stylesheet" />
+    <link href="calculadora.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="body">
+    <fieldset>
+      <section class="tudo">
+        
+        <input type="text" class="visor" id="visor"/>
+        
+          <div>
+            <button class="ac" id="ac" onclick = "limpar()">AC</button>
+          </div>
+        
+        <section class="botoes">
+          <div>
+            <button class="numero" onclick="adicionar(7)" id="tecla">7</button>
+            <button class="numero" onclick="adicionar(8)" id="tecla">8</button>
+            <button class="numero" onclick="adicionar(9)" id="tecla">9</button>
+            <button class="operador" onclick ="clickOperador('/')">/</button>
+          </div>
+
+          <div>
+            <button class="numero" onclick="adicionar(4)" id="tecla">4</button>
+            <button class="numero" onclick="adicionar(5)" id="tecla">5</button>
+            <button class="numero" onclick="adicionar(6)" id="tecla">6</button>
+            <button class="operador" onclick ="clickOperador('x')">x</button>
+          </div>
+
+          <div>
+            <button class="numero" onclick="adicionar(1)" id="tecla">1</button>
+            <button class="numero" onclick="adicionar(2)" id="tecla">2</button>
+            <button class="numero" onclick="adicionar(3)" id="tecla">3</button>
+            <button class="operador" onclick ="clickOperador('-')">-</button>
+          </div>
+
+          <div>
+            <button class="numero" onclick="adicionar(0)">0</button>
+            <button class="numero" onclick="adicionar(',')">,</button>
+            <button class="igual" id="resultado" onclick ="resultado()">=</button>
+            <button class="operador" onclick ="clickOperador('+')">+</button>
+          </div>
+        </section>
+      </section>
+    </fieldset>
+    <script src="calculadora.js"></script>
+  </body>
+</html>

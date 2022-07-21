@@ -1,0 +1,129 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+body {
+  background:linear-gradient(45deg, rgba(255, 209, 124, 0.63), rgb(252, 169, 169));
+  height: 100vh;
+  display: flex;
+}
+
+fieldset {
+  background-color: rgb(182, 255, 255);
+  width: 300px;
+  height: 400px;
+  margin: auto; 
+  border-radius: 30px;
+  border: 3px solid rgba(151, 77, 77, 0.808);
+  padding: 40px 20px 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+.visor {
+  width: 282px;
+  height: 50px;
+  margin: auto;
+  border: 2.5px solid rgba(119, 110, 110, 0.849);
+  border-radius: 3px;
+  background-color: aliceblue;
+  font-family: "Indie Flower", cursive;
+  font-size: 30px;
+  font-weight: 100;
+  color: rgb(133, 133, 168);
+  text-align: right;
+}
+
+.tudo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-around;
+}
+
+.botoes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.numero {
+  background-color: rgb(248, 250, 139);
+  border: 2.5px solid rgba(116, 45, 45, 0.808);
+  border-radius: 8px;
+  width: 70px;
+  height: 55px;
+  font-family: "Indie Flower", cursive;
+  font-size: 30px;
+  font-weight: 100;
+  color: rgb(107, 107, 134);
+}
+
+.numero:hover {
+  background-color: rgb(255, 251, 0);
+  transition: all 0.3s ease-in-out;
+  color: rgb(0, 0, 0);
+  border: 2.5px solid rgb(0, 0, 0);
+}
+
+.operador {
+  background-color: rgb(253, 194, 127);
+  border: 2.5px solid rgba(116, 45, 45, 0.808);
+  border-radius: 8px;
+  width: 70px;
+  height: 55px;
+  font-family: "Indie Flower", cursive;
+  font-size: 30px;
+  font-weight: 100;
+  color: rgb(79, 79, 109);
+}
+
+.operador:hover {
+  background-color: rgb(245, 166, 101);
+  transition: all 0.3s ease-in-out;
+  color: rgb(0, 0, 0);
+  border: 2.5px solid rgb(0, 0, 0);
+}
+
+.igual {
+  background-color: rgb(253, 194, 127);
+  border: 2.5px solid rgba(116, 45, 45, 0.808);
+  border-radius: 8px;
+  width: 70px;
+  height: 55px;
+  font-family: "Indie Flower", cursive;
+  font-size: 30px;
+  font-weight: 100;
+  color: rgb(79, 79, 109);
+}
+
+.igual:hover {
+  background-color: rgb(245, 166, 101);
+  transition: all 0.3s ease-in-out;
+  color: rgb(0, 0, 0);
+  border: 2.5px solid rgb(255, 115, 0);
+}
+
+.ac {
+  background-color: rgb(255, 219, 143);
+  border: 2.5px solid rgba(116, 45, 45, 0.808);
+  border-radius: 8px;
+  width: 70px;
+  height: 35px;
+  font-family: "Indie Flower", cursive;
+  font-size: 20px;
+  font-weight: 100;
+  color: rgb(92, 92, 104);
+  margin-top: 20px;
+}
+
+.ac:hover {
+  background-color: rgb(247, 165, 99);
+  transition: all 0.3s ease-in-out;
+  color: rgb(0, 0, 0);
+  border: 2.5px solid rgb(0, 0, 0);
+}
