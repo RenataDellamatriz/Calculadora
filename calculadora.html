@@ -16,40 +16,42 @@
   <body id="body">
     <fieldset>
       <section class="tudo">
-        
-        <input type="text" class="visor" id="visor"/>
-        
-          <div>
-            <button class="ac" id="ac" onclick = "limpar()">AC</button>
-          </div>
-        
+        <div>
+          <p id="select"></p>
+          <input type="text" class="visor" id="visor" />
+
+          <button class="ac" id="ac" onclick="limpar()">AC</button>
+        </div>
+
         <section class="botoes">
           <div>
             <button class="numero" onclick="adicionar(7)" id="tecla">7</button>
             <button class="numero" onclick="adicionar(8)" id="tecla">8</button>
             <button class="numero" onclick="adicionar(9)" id="tecla">9</button>
-            <button class="operador" onclick ="clickOperador('/')">/</button>
+            <button class="operador" onclick="clickOperador('/')">/</button>
           </div>
 
           <div>
             <button class="numero" onclick="adicionar(4)" id="tecla">4</button>
             <button class="numero" onclick="adicionar(5)" id="tecla">5</button>
             <button class="numero" onclick="adicionar(6)" id="tecla">6</button>
-            <button class="operador" onclick ="clickOperador('x')">x</button>
+            <button class="operador" onclick="clickOperador('x')">x</button>
           </div>
 
           <div>
             <button class="numero" onclick="adicionar(1)" id="tecla">1</button>
             <button class="numero" onclick="adicionar(2)" id="tecla">2</button>
             <button class="numero" onclick="adicionar(3)" id="tecla">3</button>
-            <button class="operador" onclick ="clickOperador('-')">-</button>
+            <button class="operador" onclick="clickOperador('-')">-</button>
           </div>
 
           <div>
             <button class="numero" onclick="adicionar(0)">0</button>
             <button class="numero" onclick="adicionar(',')">,</button>
-            <button class="igual" id="resultado" onclick ="resultado()">=</button>
-            <button class="operador" onclick ="clickOperador('+')">+</button>
+            <button class="igual" id="resultado" onclick="resultado()">
+              =
+            </button>
+            <button class="operador" onclick="clickOperador('+')">+</button>
           </div>
         </section>
       </section>
