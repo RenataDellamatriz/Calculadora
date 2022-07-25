@@ -30,7 +30,7 @@ p{
   text-align: right;
   font-family: "Indie Flower", cursive;
   font-size: 25px;
-  padding-right: 20px;
+  padding-right: 15px;
   
 
 }
@@ -47,6 +47,7 @@ p{
   font-weight: 100;
   color: rgb(133, 133, 168);
   text-align: right;
+  padding-right:10px;
 }
 
 .tudo {
