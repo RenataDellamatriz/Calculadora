@@ -1,10 +1,6 @@
 let visorInput = document.getElementById("visor");
 let select = document.getElementById("select");
 let tecla = document.getElementById("tecla");
-let n1 = "";
-let n2 = "";
-let operador = "";
-
 
 function limpar() {
   visorInput.value = "";
@@ -13,25 +9,42 @@ function limpar() {
 
 function adicionar(numero) {
   visorInput.value += numero;
-
 }
 
-//só da certo com um operador por vez
+//arrumar tecla enter receber resultado()
+document.addEventListener("keypress", function(e) {
+  if (e.key === "Enter") {
+    
+    resultado()
+    console.log(resultado())
+  }
+})
+
+
+function handleOperator() {
+  const operadorIndex = visorInput.value.search(/[x+\/-]+/)
+  const operador = visorInput.value[operadorIndex]
+  return operador
+}
+
 function clickOperador(n) {
-  operador = n;
-  if(n1){
+  let operador = handleOperator()
+  let numbers = visorInput.value.split(operador)
+  if (numbers.length == 2) {
     resultado()
   }
-  n1 = visorInput.value.replace(",", ".");
-  visorInput.value += operador;
+  visorInput.value.replace(",", ".");
+  visorInput.value += n;
 }
 
 function resultado() {
-  let conta = visorInput.value.split(operador);
-  n2 = conta[1].replace(",", ".")
-  select.innerText = visorInput.value;
-  let resultado;
+  let operador = handleOperator()
+  let numbers = visorInput.value.split(operador)
 
+  let n1 = numbers[0].replace(",", ".")
+  let n2 = numbers[1].replace(",", ".")
+
+  let resultado;
 
   if (operador == "+") {
     resultado = Number(n1) + Number(n2);
@@ -48,5 +61,7 @@ function resultado() {
   if (operador == "/") {
     resultado = Number(n1) / Number(n2);
   }
+  select.innerText = `${n1} ${operador} ${n2}`
   visorInput.value = resultado.toString().replace(".", ",");
 }
+
