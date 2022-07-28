@@ -12,23 +12,21 @@ function adicionar(numero) {
 }
 
 //arrumar tecla enter receber resultado()
-document.addEventListener("keypress", function(e) {
+document.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
-    
     resultado()
-    console.log(resultado())
   }
 })
 
 
-function handleOperator() {
+function verificarOperador() {
   const operadorIndex = visorInput.value.search(/[x+\/-]+/)
   const operador = visorInput.value[operadorIndex]
   return operador
 }
 
 function clickOperador(n) {
-  let operador = handleOperator()
+  let operador = verificarOperador()
   let numbers = visorInput.value.split(operador)
   if (numbers.length == 2) {
     resultado()
@@ -38,7 +36,7 @@ function clickOperador(n) {
 }
 
 function resultado() {
-  let operador = handleOperator()
+  let operador = verificarOperador()
   let numbers = visorInput.value.split(operador)
 
   let n1 = numbers[0].replace(",", ".")
